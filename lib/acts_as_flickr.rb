@@ -18,7 +18,8 @@ module ActsAsFlickr
       self.flickr_title_field = (options[:flickr_title_field] || :title).to_s
       self.flickr_description_field = (options[:flickr_description_field] || :description).to_s
 
-      default_connect_message = "You must be connected to Flickr first (see https://github.com/hanklords/flickraw#authentication)"
+      default_connect_message = "You must be connected to Flickr first" +
+                                " (see https://github.com/hanklords/flickraw#authentication)" unless Rails.env.production?
       self.flickr_connection_error_message = (options[:connection_error_message] || default_connect_message).to_s
 
       attr_accessor :image_file
