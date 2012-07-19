@@ -1,5 +1,6 @@
 module ActsAsFlickr
   extend ActiveSupport::Concern
+  require 'flickraw'
 
   included do
   end
@@ -24,7 +25,7 @@ module ActsAsFlickr
     end
 
     def connected_to_flickr?
-      try(:flickr) && flickr.access_token.present? && flickr.access_secret.present?
+      flickr.access_token.present? && flickr.access_secret.present?
     end
   end
 
