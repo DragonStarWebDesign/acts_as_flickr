@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    acts_as_flickr (0.1.1)
+    acts_as_flickr (0.1.2)
       flickraw (~> 0.9.5)
       rails (~> 3.2.6)
 
