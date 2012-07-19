@@ -7,11 +7,12 @@ require "acts_as_flickr/version"
 Gem::Specification.new do |s|
   s.name        = "acts_as_flickr"
   s.version     = ActsAsFlickr::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = ["DragonStar Web Design (Steve Aquino)"]
+  s.email       = ["draco@dragonstarwebdesign.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ActsAsFlickr."
-  s.description = "TODO: Description of ActsAsFlickr."
+  s.summary     = "Allows ActiveRecord models to easily connect with Flickr API for photo hosting."
+  s.description = "ActsAsFlickr is a simple ActiveRecord extension.  Just add acts_as_flickr to your " +
+                  "model, add a flickr_id and url field to your model, and upload away!"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
