@@ -24,7 +24,7 @@ module ActsAsFlickr
     end
 
     def connected_to_flickr?
-      flickr.access_token.present? && flickr.access_secret.present?
+      try(:flickr) && flickr.access_token.present? && flickr.access_secret.present?
     end
   end
 

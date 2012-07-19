@@ -34,7 +34,8 @@ class ActsAsFlickrTest < ActiveSupport::TestCase
   end
 
   test "should connect to Flickr when creating a new ActsAsFlickr model" do
-    photo = FlickrPhoto.create(:title => "Test", :description => "This is a test", :image_file => test_image_file)
+    photo = FlickrPhoto.new(:title => "Test", :description => "This is a test", :image_file => test_image_file)
+    assert photo.save, photo.errors.full_messages.join(", ")
     assert_not_nil photo.flickr_id
     assert_not_nil photo.url
     assert_match "flickr.com", photo.url
