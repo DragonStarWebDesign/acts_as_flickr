@@ -9,9 +9,10 @@ Gem::Specification.new do |s|
   s.version     = ActsAsFlickr::VERSION
   s.authors     = ["DragonStar Web Design (Steve Aquino)"]
   s.email       = ["draco@dragonstarwebdesign.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/DragonStarWebDesign/acts_as_flickr"
   s.summary     = "Allows ActiveRecord models to easily connect with Flickr API for photo hosting."
-  s.description = "ActsAsFlickr is a simple ActiveRecord extension.  Just add acts_as_flickr to your " +
+  s.description = "ActsAsFlickr is a simple ActiveRecord extension that uses the flick_raw gem to " +
+                  "connect with the Flickr API and host photos.  Just add acts_as_flickr to your " +
                   "model, add a flickr_id and url field to your model, and upload away!"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
