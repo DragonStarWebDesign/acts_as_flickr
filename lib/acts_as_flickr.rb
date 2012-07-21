@@ -55,14 +55,14 @@ module ActsAsFlickr
 
     def update_flickr
       if self.class.connected_to_flickr?
-        flickr.photos.setMeta photo_id: self.send( self.class.flickr_title_field ).merge(self.as_flickr_upload)
+        flickr.photos.setMeta photo_id: self.send( self.class.flickr_identifier_field ).merge(self.as_flickr_upload)
       else
         add_connection_error and return false
       end
     end
 
     def remove_from_flickr
-      flickr.photos.delete photo_id: self.send( self.class.flickr_title_field ) if self.class.connected_to_flickr?
+      flickr.photos.delete photo_id: self.send( self.class.flickr_identifier_field ) if self.class.connected_to_flickr?
     end
 
 end

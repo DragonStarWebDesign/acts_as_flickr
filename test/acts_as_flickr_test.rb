@@ -1,3 +1,5 @@
+# ToDo: finish test suite by adding tests for ComplexPhoto and SimplePhoto
+
 require 'test_helper'
 
 class ActsAsFlickrTest < ActiveSupport::TestCase
