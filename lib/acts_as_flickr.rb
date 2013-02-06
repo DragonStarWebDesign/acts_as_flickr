@@ -47,7 +47,7 @@ module ActsAsFlickr
     def upload_to_flickr
       if self.class.connected_to_flickr?
         self.send( "#{self.class.flickr_identifier_field}=", flickr.upload_photo(self.image_file.path, self.as_flickr_upload) ) and
-        self.send( "#{self.class.flickr_url_field}=", FlickRaw.url_b( flickr.photos.getInfo(photo_id: self.flickr_id) ) )
+        self.send( "#{self.class.flickr_url_field}=", FlickRaw.url_b( flickr.photos.getInfo(photo_id: self.send(self.class.flickr_identifier_field)) ) )
       else
         add_connection_error and return false
       end
